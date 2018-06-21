@@ -3,70 +3,145 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Lukas Dombrovsky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LukasDombrovsky</title>
+  
+	<!-- Typekit fonts -->
+  	<script src="https://use.typekit.net/vdk3aep.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	<!-- External -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-
-    <!-- Material -->
-    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.7/angular-material.css'>
-
-    <!-- SearchResults -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/styleSearchResults.css">
-
-    <!-- LoginPage -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-    <!-- Search bar -->
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-
-    <!-- Pop-up -->
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styleSearchResults.css">
+	<!-- Internal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/loadingCircle.css">
-    <!-- <link rel="stylesheet" href="css/stylePopUp.css"> -->
-    
-
+  
 </head>
 
 <body>
-  <div ng-app="Portfolio">
-    <ng-view></ng-view> 
-  </div>
 
-  <!-- External scripts -->
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js'></script>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
-  <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.7/angular-material.js'></script>
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-sanitize.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<div class="outer">
+		<i class="fa fa-arrow-circle-up" id="arrow" aria-hidden="true"></i>
+		
+		<div class="inner">
+			
+			<!-- HEADER SECTION -->
+			<header>
+				<div class="container-fluid clearfix">
+					<div class="row">
+						<i class="fa fa-bars nav-toggle" aria-hidden="true"></i>
+						<nav role="navigation">
+							<i class="fa fa-times nav-toggle" aria-hidden="true"></i>
+							<ul class="list-unstyled" id="nav">
+								<li>
+									<a class="nav-link" href="skills-sec"><span>Skills</span></a>
+									<div class="underline"></div>
+								</li>
+								<li>
+									<a class="nav-link" href="#portfolio"><span>Portfolio</span></a>
+									<div class="underline"></div>
+								</li>
+								<li>
+									<a class="nav-link" href="#contacts"><span>Contacts</span></a>
+									<div class="underline"></div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<h1 class="titanic naked">Hi. My name is Lukas Dombrovsky.<br>I am IT student in fourth year of his studies,
+						spliting his days between building webs, crypto markets and sport.</h1>
+				</div>
+			</header>
 
-  <!-- Modules -->
-  <script src="js/app.js"></script>
+			<!-- INTRODUCTION SECTION -->
+			<section class="skills-sec">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+							<h2>Skills</h2>
+						</div>
+						<div class="col-xs-8 col-xs-offset-2">
+							<div id="skills">
+								<img class="img-responsive skill toR" src="https://www.dropbox.com/s/ptiub25akn0arv1/js.png?dl=1" alt="js icon" title="Javascript" />
+								<img class="img-responsive skill" src="https://www.dropbox.com/s/mg6l07shpizexrm/css3.png?dl=1" alt="css icon" title="CSS3" />
+								<img class="img-responsive skill toL" src="https://www.dropbox.com/s/gpnimluvvf99aln/html5.png?dl=1" alt="html icon" title="HTML5" />
+								<img src="https://www.dropbox.com/s/imyppai6tbkcy66/bootstrap.png?dl=1" alt="bootstrap icon" class="img-responsive skill toR" title="Bootstrap" />
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Angular_one_color_inverse_logo.svg/2000px-Angular_one_color_inverse_logo.svg.png" alt="angular icon" class="img-responsive skill" title="Angular" />
+								<img src="https://www.dropbox.com/s/3qcvkhy12pmmyy9/gitpng.png?dl=1" alt="git icon" class="img-responsive skill toL" title="GitHub" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-  <!-- Controllers -->  
-  <script src="js/controllers/MainController.js"></script>
-  <script src="js/controllers/TwitterInsightsController.js"></script>
-  <script src="js/controllers/StockPredictController.js"></script>
-  <script src="js/controllers/CognitiveSearchController.js"></script>
-  <script src="js/controllers/CoinSignalsController.js"></script>
+			<!-- PORTFOLIO SECTION -->
+			<section class="portfolio-sec">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+							<h2>Portfolio</h2>
+						</div>
+						<div class="col-xs-12">
+							<div id="portfolio">
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/BKddGL" target="_blank"><img src="https://www.dropbox.com/s/jlt6wt35u88kqmv/weather.png?dl=1" alt="weather_app" class="img-responsive" /></a>
+								</div>
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/oxqzLx" target="_blank"><img src="https://www.dropbox.com/s/pmqf1y6q1zf5win/pomodoro.png?dl=1" alt="pomodoto_timer" class="img-responsive" /></a>
+								</div>
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/NNXdxw" target="_blank"><img src="https://www.dropbox.com/s/rb7jycwtwxtkt7d/calculator.png?dl=1" alt="calculator" class="img-responsive" /></a>
+								</div>
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/oxdYgW" target="_blank"><img src="https://www.dropbox.com/s/8hpioow2c68c97w/simon.png?dl=1" alt="simon_game" class="img-responsive" /></a>
+								</div>
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/yOzemP" target="_blank"><img src="https://www.dropbox.com/s/f49kdhi98ygoqif/quote.png?dl=1" alt="quote_machine" class="img-responsive" /></a>
+								</div>
+								<div class="project">
+									<a href="https://codepen.io/dagman/pen/jqZbje" target="_blank"><img src="https://www.dropbox.com/s/canzxmzo98vd1bj/tictactoe.png?dl=1" alt="tic_tac_toe" class="img-responsive" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		
+		<!-- FOOTER SECTION -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1">
+						<h2>Get in Touch</h2>
+					</div>
+					<div class="col-xs-12">
+						<div id="contacts">
+							<div class="row">
+								<div class="col-lg-6 col-sm-6">
+									<a class="contact-link awesome" href="mailto:lukas.dombrovsky@gmail.com">Mail</a>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<a class="contact-link awesome" href="http://www.linkedin.com/in/lukasdombrovsky" target="_blank">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
   
-  <!-- Services -->
-  <!-- <script src="js/services/searchProvider.js"></script>
-  <script src="js/services/authenticationProvider.js"></script> -->
+	<!-- Scripts external -->
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js'></script>
+	<!-- <script src='js/rfhjs.js'></script> -->
+	
+	<!-- Scripts internal -->
+	<script  src="js/index.js"></script>
 
 </body>
 
