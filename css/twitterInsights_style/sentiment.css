@@ -74,7 +74,7 @@
 }
 
 /* sparkle porgess bars */
-@import url(https://fonts.googleapis.com/css?family=Aldrich);
+/* @import url(https://fonts.googleapis.com/css?family=Aldrich);
 
 .sparkleProgressbar{
     position:relative;
@@ -313,4 +313,4 @@
 @keyframes sparkle {
 	from {background-position: 0 0;}
 	to {background-position: 0 -64px;}
-}
+} */
