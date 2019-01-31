@@ -14,8 +14,8 @@ app.config(function($routeProvider) {
             '../css/twitterInsights_style/magnific-popup.css',
             '../css/twitterInsights_style/creative.css',
             '../css/twitterInsights_style/percent.css',
-            '../css/twitterInsights_style/sparkleProgressbar.css',
-            '../css/twitterInsights_style/sentiment.css',
+            // '../css/twitterInsights_style/sparkleProgressbar.css',
+            '../css/twitterInsights_style/sentimentAndSparkleProgressbars.css',
             '../css/twitterInsights_style/dropdown.css'
       ]
   })
