@@ -1,100 +1,66 @@
 <!DOCTYPE html>
-<html ng-app="Portfolio" lang="en">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lukas Dombrovsky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Angular Material: none -->
-  <link rel='stylesheet prefetch' href='assets/AngularMaterial/angular-material.css'>
+    <title>Crypto dashboard</title>
 
-  <!-- Normalize: MainPage -->
-  <link rel="stylesheet" href="assets/Normalize/normalize.min.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-  <!-- Bootstrap: MainPage,TwitterInsights  -->
-  <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
 
-  <!-- FontAwesome All: MainPage -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-
-  <!-- FontAwesome: TwitterInsights -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <!-- Open Sans font: TwitterInsights -->
-  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-
-  <!-- Merriweather font: TwitterInsights -->
-  <!-- <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> -->
-
-  <!-- Custom style: MainPage -->
-  <link href="css/mainPage_style.css" rel="stylesheet"> 
-
-  <!-- Custom style: TwitterInsights -->
-  <!-- <link href="css/twitterInsights_style/magnific-popup.css" rel="stylesheet">
-  <link href="css/twitterInsights_style/creative.css" rel="stylesheet">
-  <link href="css/twitterInsights_style/percent.css" rel="stylesheet">
-  <link href="css/twitterInsights_style/sparkleProgressbar.css" rel="stylesheet">
-  <link href="css/twitterInsights_style/sentiment.css" rel="stylesheet">
-  <link href="css/twitterInsights_style/dropdown.css" rel="stylesheet">  -->
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-  <div>
-    <ng-view></ng-view> 
-  </div>
+<body id="page-top" class="index" ng-app="cryptoDashboard" ng-controller="mainController">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
 
-  <!-- JQuery: MainPage, TwitterInsights -->
-  <script src='assets/JQuery/jquery.min.js'></script>
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#!">Crypto dashboard</a>
+        </div>
 
-  <!-- AngularJs -->
-  <script src='assets/Angular/angular.js'></script>
-  <script src='assets/AngularAnimate/angular-animate.min.js'></script>
-  <script src='assets/AngularRoute/angular-route.min.js'></script>
-  <script src='assets/AngularAria/angular-aria.min.js'></script>
-  <script src='assets/AngularMessages/angular-messages.min.js'></script>
-  <script src='assets/SvgAssetsCache/svg-assets-cache.js'></script>
-  <script src='assets/AngularMaterial/angular-material.js'></script>
-  <script src='assets/AngularSanitize/angular-sanitize.js'></script>
-  <script src='assets/AngularCss/angular-css.min.js'></script>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#!forecast">Forecast</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
-  <!-- Bootstrap: MainPage, TwitterInsights -->
-  <script src='assets/Bootstrap/bootstrap.min.js'></script>
-  <script src="assets/UiBootstrapTpls/ui-bootstrap-tpls-2.5.0.js"></script>
+<!-- AngularJs MVC app -->
+<div ng-view></div>
 
-  <!-- Prefixfree: MainPage, TwitterInsights -->
-  <script src="assets/Prefixfree/prefixfree.min.js"></script>
+<!-- SCRIPTS -->
+<!-- AngularJs -->
+<script src="js/angular.min.js"></script>
+<script src="angular/main.controller.js"></script>
+<script src="js/angular-route.js"></script>
 
-  <!-- TweenMax: MainPage -->
-  <script src='assets/TweenMax/TweenMax.min.js'></script>
-
-  <!-- JQuery Waypoints: MainPage -->
-  <script src='assets/JQueryWaypoints/jquery.waypoints.min.js'></script>
-
-  <!-- JQuery Easing: TwitterInsights -->
-  <script src='assets/JQueryEasing/jquery.easing.min.js'></script>
-
-  <!-- Scroll Reveal: TwitterInsights -->
-  <script src="assets/ScrollReveal/scrollreveal.min.js"></script>
-
-  <!-- JQuery Magnific Popup: TwitterInsights -->
-  <script src="assets/JQueryMagnificPopup/jquery.magnific-popup.min.js"></script>
-  
-  <!-- Custom script: MainPage -->
-  <script src="js/mainPage.js"></script>
-
-  <!-- Custom script: TwitterInsights -->
-  <script src="js/creative.js"></script>
-
-  <!-- Angularjs Modules -->
-  <script src="js/app.routes.js"></script>
-
-  <!-- Angularjs Controllers -->  
-  <script src="js/controllers/MainController.js"></script>
-  <script src="js/controllers/TwitterInsightsController.js"></script>
-  <script src="js/controllers/StockPredictController.js"></script>
-  <script src="js/controllers/CognitiveSearchController.js"></script>
-  <script src="js/controllers/CoinSignalsController.js"></script> 
 </body>
 
 </html>
