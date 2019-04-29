@@ -16,12 +16,14 @@
                             <tr>
                                 <th>Pair</th>
                                 <th>Forecast</th>
+                                <th>Strength</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="item in forecastObj">
                                 <td>{{ item.pair }}</td>
                                 <td>{{ item.forecast }}</td>
+                                <td>{{ item.strength }}</td>
                             </tr>
                         </tbody>
                     </table>

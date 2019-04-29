@@ -10,7 +10,7 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('mainController', function($scope,$location,$http) {
+app.controller('mainController', function($scope,$http) {
     var cryptocurrencyPairs = ["USDT_BAT", "USDT_BNT", "USDT_BTC", "USDT_DASH", "USDT_DOGE",
                         "USDT_EOS", "USDT_ETC", "USDT_ETH", "USDT_GNT","USDT_KNC",
                         "USDT_LOOM","USDT_LSK","USDT_LTC","USDT_MANA","USDT_NXT",
@@ -32,445 +32,1029 @@ app.controller('mainController', function($scope,$location,$http) {
     ];
     var candlePatternsRise = [
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 2428
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 481
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 417
         },
         {
-            "firstCandle": "long line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 366
         },
         {
-            "firstCandle": "long line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 356
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 343
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line red with long body"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 315
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line red with long body",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 267
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line red with long body",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 222
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line green with long body"
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 218
         },
-    ];
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 216
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line red with long body",
+            "PatternCount": 197
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 193
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 191
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 182
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 169
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line green with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 165
+        },
+        {
+            "FirstCandleType": "short line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 163
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 151
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 147
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with short body",
+            "PatternCount": 140
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line green with long body",
+            "PatternCount": 135
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 134
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 129
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 123
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 114
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 113
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 105
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 103
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 103
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 101
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 100
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 100
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 98
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 97
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 94
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 91
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 91
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 91
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 84
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 82
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 81
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 75
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with short body",
+            "PatternCount": 75
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 74
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 73
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 73
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 71
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 70
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line green with short body",
+            "PatternCount": 70
+        }
+    ];     
     var candlePatternsFall = [
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 830
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 537
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 537
         },
         {
-            "firstCandle": "long line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line green with long body"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 365
         },
         {
-            "firstCandle": "long line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 312
         },
         {
-            "firstCandle": "long line neutral",
-            "secondCandle": "short line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 303
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line green with long body",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 251
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line neutral",
-            "thirdCandle": "long line green with long body"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 243
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line red with long body",
-            "thirdCandle": "short line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 242
         },
         {
-            "firstCandle": "short line neutral",
-            "secondCandle": "long line neutral",
-            "thirdCandle": "long line neutral"
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 227
         },
-    ];                                      
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 197
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 175
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 166
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 166
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 143
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 141
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 133
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 126
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line green with long body",
+            "PatternCount": 125
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 120
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 101
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 101
+        },
+        {
+            "FirstCandleType": "short line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 95
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 94
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 91
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 89
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with short body",
+            "PatternCount": 85
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "short line green with long body",
+            "PatternCount": 81
+        },
+        {
+            "FirstCandleType": "short line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 77
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "short line green with long body",
+            "PatternCount": 75
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with short body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 68
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 64
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 64
+        },
+        {
+            "FirstCandleType": "long line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line red with long body",
+            "PatternCount": 61
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "short line green with long body",
+            "PatternCount": 61
+        },
+        {
+            "FirstCandleType": "long line red with short body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 60
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with short body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 57
+        },
+        {
+            "FirstCandleType": "long line green with long body",
+            "SecondCandleType": "short line red with long body",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 57
+        },
+        {
+            "FirstCandleType": "short line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 57
+        },
+        {
+            "FirstCandleType": "short line red with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 55
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 55
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with short body",
+            "PatternCount": 54
+        },
+        {
+            "FirstCandleType": "short line green with long body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 53
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line green with short body",
+            "PatternCount": 52
+        },
+        {
+            "FirstCandleType": "long line green with short body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "short line neutral",
+            "PatternCount": 52
+        },
+        {
+            "FirstCandleType": "long line green with short body",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with long body",
+            "PatternCount": 51
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line red with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 50
+        },
+        {
+            "FirstCandleType": "short line neutral",
+            "SecondCandleType": "long line green with long body",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 49
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "short line neutral",
+            "ThirdCandleType": "long line green with short body",
+            "PatternCount": 48
+        },
+        {
+            "FirstCandleType": "long line neutral",
+            "SecondCandleType": "long line neutral",
+            "ThirdCandleType": "long line neutral",
+            "PatternCount": 47
+        }
+    ];
     var url = "", today = Math.floor(Date.now() / 1000);
     $scope.forecastObj = [
         {
             "pair":"USDT_BAT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_BNT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_BTC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_DASH",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_DOGE",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_EOS",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_ETC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_ETH",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_GNT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_KNC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_LOOM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_LSK",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_LTC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_MANA",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_NXT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_QTUM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_REP",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_SC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_SNT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_STR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_XMR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_XRP",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_ZEC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"USDT_ZRX",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ARDR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ATOM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BAT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BCHABC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BCHSV",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BCN",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BTS",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_BURST",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_CLAM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_CVC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_DASH",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_DCR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_DGB",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_DOGE",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_EOS",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ETC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ETH",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_FCT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_FOAM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_GAME",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_GAS",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_GNT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_GRIN",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_HUC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_KNC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_LBC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_LOOM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_LPT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_LSK",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_LTC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_MAID",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_MANA",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_NAV",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_NMC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_NMR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_NXT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_OMG",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_OMNI",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_PASC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_POLY",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_PPC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_QTUM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_REP",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_SBD",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_SC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_SNT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_STEEM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_STORJ",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_STR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_STRAT",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_SYS",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_VIA",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_VTC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_XCP",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_XEM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_XMR",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_XPM",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_XRP",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ZEC",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         },
         {
             "pair":"BTC_ZRX",
-            "forecast": "?"
+            "forecast": "?",
+            "strength": "-"
         }
 ];
 
@@ -483,27 +1067,45 @@ app.controller('mainController', function($scope,$location,$http) {
         // download recent data from Poloniex API
         $http.get(url).then(function(response){
             // find candle type for current cryptocurrency pair
-            firstCandle = findCandleType(response.data[response.data.length-4],response.data[response.data.length-3]);
-            secondCandle = findCandleType(response.data[response.data.length-3],response.data[response.data.length-2]);
-            thirdCandle = findCandleType(response.data[response.data.length-2],response.data[response.data.length-1]);
+            firstCandle = findCandleType(response.data.slice(response.data.length-23,response.data.length-4),response.data[response.data.length-3]);
+            secondCandle = findCandleType(response.data.slice(response.data.length-22,response.data.length-3),response.data[response.data.length-2]);
+            thirdCandle = findCandleType(response.data.slice(response.data.length-21,response.data.length-2),response.data[response.data.length-1]);
             
+            var fallPattern = null;
+
             // check if candles are known pattern in fall patterns
             angular.forEach(candlePatternsFall, function(pattern) {
-                if(pattern.firstCandle == firstCandle && pattern.secondCandle == secondCandle && pattern.thirdCandle == thirdCandle) {
+                if(pattern.FirstCandleType == firstCandle && pattern.FirstCandleType == secondCandle && pattern.FirstCandleType == thirdCandle) {
                     var index = $scope.forecastObj.findIndex(function(p) {
                         return p.pair == cryptoPair;
                     });
                     $scope.forecastObj[index].forecast = "fall";
+                    $scope.forecastObj[index].strength = "100%";
+                    fallPattern = pattern;
                 }
             });
             
             // check if candles are known pattern in rise patterns
             angular.forEach(candlePatternsRise, function(pattern) {
-                if(pattern.firstCandle == firstCandle && pattern.secondCandle == secondCandle && pattern.thirdCandle == thirdCandle) {
+                if(pattern.FirstCandleType == firstCandle && pattern.FirstCandleType == secondCandle && pattern.FirstCandleType == thirdCandle) {
                     var index = $scope.forecastObj.findIndex(function(p) {
                         return p.pair == cryptoPair;
                     });
-                    $scope.forecastObj[index].forecast = "rise";
+                    
+                    // if the rise pattern is not a fall pattern the strength is 100%
+                    if($scope.forecastObj[index].forecast == "?") {
+                        $scope.forecastObj[index].forecast = "rise";
+                        $scope.forecastObj[index].strength = "100%";
+                    // if there this is same pattern for rise and fall hypes, calculate strentgh from PatternCounts ratio
+                    } else {
+                        if(pattern.PatternCount > fallPattern.PatternCount) {
+                            $scope.forecastObj[index].forecast = "rise";
+                            $scope.forecastObj[index].strength = Math.round((pattern.PatternCount/(pattern.PatternCount+fallPattern.PatternCount))*100)+"%";
+                        } else {
+                            $scope.forecastObj[index].forecast = "fall";
+                            $scope.forecastObj[index].strength = Math.round((fallPattern.PatternCount/(pattern.PatternCount+fallPattern.PatternCount))*100)+"%";
+                        }
+                    }  
                 }
             });
         });
@@ -513,8 +1115,14 @@ app.controller('mainController', function($scope,$location,$http) {
     function findCandleType(helperCandle,candle) {
         var line = "", candleType = "";
 
+        var averageLineHeight = 0;
+        angular.forEach(helperCandle, function(item) {
+            averageLineHeight += (item.high - item.low);
+        });
+        averageLineHeight = averageLineHeight/helperCandle.length;
+
         // decide if the candle is long or short candle
-        if((helperCandle.high-helperCandle.low) < (candle.high-candle.low)) {
+        if(averageLineHeight < (candle.high-candle.low)) {
           line = "long"
         } else {
           line = "short"
@@ -522,8 +1130,8 @@ app.controller('mainController', function($scope,$location,$http) {
         
         // find candle type
         
-        // neutral candle body is less that 3% of price
-          if(Math.abs(candle.close-candle.open) < (0.03*candle.close)) {
+        // neutral candle body is less that 2% of price
+          if(Math.abs(candle.close-candle.open) < (0.02*candle.close)) {
             // testing if line is long or short
             if(line == "long") {
               candleType = "long line neutral"
@@ -570,8 +1178,4 @@ app.controller('mainController', function($scope,$location,$http) {
         
         return(candleType)
     };
-
-                        
-    
-
 });
